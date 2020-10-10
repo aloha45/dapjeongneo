@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Dapjeongneo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class='nav-bar'>
+                <li><a href="/about">About</a></li>
+                <li><a href="{% url 'index' %}">See all the damn dreams</a></li>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
