@@ -1,5 +1,6 @@
 from django.db import models, migrations
 from datetime import date
+from django.urls import reverse
 
 # Create your models here.
 
@@ -11,3 +12,6 @@ class Dream(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'dream_id': self.id})

@@ -13,6 +13,10 @@
             <div class="card-body">
                 <p class="card-text">{{ dream.description }}
             </div>
+            <div class="card-action">
+                <a href="{% url 'dreams_update' dream.id %}">Edit</a>
+                <a href="{% url 'dreams_delete' dream.id %}">Delete</a>
+            </div>
         </div>
     </div>
 {% endfor %}
