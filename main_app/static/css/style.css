@@ -4,8 +4,9 @@ body {
     background-repeat: no-repeat;
   }
 
-  nav {
-    background-color: black
+  .nav-bar {
+    background-color: black;
+    justify-content: right;
   }
 
   .container {

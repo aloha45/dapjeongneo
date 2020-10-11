@@ -11,28 +11,34 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class='nav-bar'>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Dapjeongneo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav justify-content-end">
                 {% if user.is_authenticated %}
-                <ul>
-                    <li><a href="{% url 'index' %}">See all the damn dreams</a></li>
-                </ul>
-                <ul>
-                    <li><a href="{% url 'dreams_create' %}">Record a funky dream</a></li>
-                </ul>
-                <ul>
-                    <li><a href="{% url 'logout' %}">Log Out</a></li>
-                </ul>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'index' %}">In Your Dreams<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'dreams_create' %}">Dream a little dream<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'logout' %}">Log Out<span class="sr-only">(current)</span></a>
+                </li>
                 {% else %}
-                <ul>
-                    <li><a href="{% url 'login' %}">Log In</a></li>
-                </ul>
-                <ul>
-                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                </ul>
-                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup' %}">Sign Up<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Log In<span class="sr-only">(current)</span></a>
+                  </li>
+                  {% endif %}
+              </ul>
             </div>
-        </nav>
+          </nav>
     </header>
     {% block content %}
     {% endblock %}
