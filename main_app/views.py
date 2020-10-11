@@ -5,16 +5,20 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Dream
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
 def home(request):
     return render(request, 'home.html')
 
+@login_required
 def dreams_index(request):
-    dreams = Dream.objects.all()
+    dreams = Dream.objects.filter(user=request.user)
     return render(request, 'dreams/index.html', {'dreams': dreams})
 
+@login_required
 def dreams_detail(request, dream_id):
     dream = Dream.objects.get(id=dream_id)
     return render(request, 'dreams/detail.html', { 'dream': dream })
@@ -33,17 +37,17 @@ def signup(request):
     context = {'form': form, 'error_message': error_message}
     return render (request, 'registration/signup.html', context)
 
-class DreamCreate(CreateView):
+class DreamCreate(LoginRequiredMixin, CreateView):
     model = Dream
     fields = ['title', 'mood', 'description']
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class DreamUpdate(UpdateView):
+class DreamUpdate(LoginRequiredMixin, UpdateView):
     model = Dream
     fields = ['mood', 'description']
 
-class DreamDelete(DeleteView):
+class DreamDelete(LoginRequiredMixin, DeleteView):
     model = Dream
     success_url = '/dreams/'
