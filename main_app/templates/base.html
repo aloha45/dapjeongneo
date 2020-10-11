@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>Dapjeongneo</title>
 </head>
@@ -13,13 +14,12 @@
         <nav>
             <div class='nav-bar'>
                 <ul>
-                    <li><a href="/about">About</a></li>
-                </ul>
-                <ul>
                     <li><a href="{% url 'index' %}">See all the damn dreams</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

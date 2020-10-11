@@ -2,6 +2,21 @@
 {% block content %}
 
 <h1>In between dreams</h1>
-<img src='https://images-na.ssl-images-amazon.com/images/I/81jityQUXyL._SL1400_.jpg'/>
+<div class='container'>
+{% for dream in dreams %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ dream.title }}</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ dream.mood }}</li>
+            </ul>
+            <div class="card-body">
+                <p class="card-text">{{ dream.description }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
 
 {% endblock %}

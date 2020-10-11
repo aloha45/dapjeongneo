@@ -5,5 +5,16 @@ body {
   }
 
   nav {
-      background-color: black
+    background-color: black
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+  }
+
+  .card {
+    text-align: center
   }
