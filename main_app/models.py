@@ -4,14 +4,10 @@ from datetime import date
 # Create your models here.
 
 
-class Dream:
-    def __init__(self, title, mood, description):
-        self.title = title
-        self.mood = mood
-        self.description = description
-        
-dreams = [
-    Dream('a scary dream', 'freaky', 'big scary werewolf'),
-    Dream('a nice dream', 'happy and warm', 'field in summer at dusk, barefeet in grass'),
-    Dream('kind of sexy', 'schwing', 'like a nerdy professor in hot pajamas')
-]
+class Dream(models.Model):
+    title = models.CharField(max_length=100)
+    mood = models.CharField(max_length=100)
+    description = models.TextField(max_length=250)
+
+    def __str__(self):
+        return self.title
