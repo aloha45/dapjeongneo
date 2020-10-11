@@ -42,5 +42,46 @@
     </header>
     {% block content %}
     {% endblock %}
+    <div id="buttons">
+        minutes:<br>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>10</button>
+        <input id="custom" type="number">
+        <button>custom</button>
+    </div>
+    <div id="time"></div>
+    <script>
+        (function() {
+            var secs, timer, text,
+                el = document.getElementById('time');
+            document.getElementById('buttons').addEventListener('click', function(evt) {
+                if (evt.srcElement === document.getElementById('custom')) return;
+                this.style.display = 'none';
+                secs = (evt.srcElement.innerHTML === 'custom') ?
+                    parseInt(document.getElementById('custom').value) * 60 : 
+                    parseInt(evt.srcElement.innerHTML) * 60;
+                updateDisplay();
+                timer = setInterval(function() {
+                    secs--;
+                    updateDisplay();
+                }, 1000);
+            });
+            function updateDisplay() {
+                if (secs === 0) {
+                    clearInterval(timer);
+                    text = "BAM!";
+                } else {
+                    text = (secs % 60) < 10 ? '0' + secs % 60 : '' + secs % 60;
+                    text = Math.floor(secs / 60).toString() + ':' + text;
+                }
+                if (secs === 60) el.className = 'inside-minute';
+                el.innerHTML = text;
+            }
+        })();
+    </script>
 </body>
 </html>
