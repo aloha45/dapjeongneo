@@ -2,7 +2,13 @@
 {% block content %}
 
 <h1>Dream a little dream</h1>
-{{% time %}}
+<h2 style='color:white'>{{ dtime }}</h2>
+<input />
+
+<script>
+    setTimeout(function(){ 
+        location.reload(), 60000});
+</script>
 
 {% endblock %}
 

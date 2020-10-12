@@ -3,18 +3,69 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Dream
-from .time import dclock
+# from .time import dclock
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+import time
+import datetime
+
+boop = time.ctime()
+
+x = boop.split()
+
+y = x[3]
+
+z = y.split(':')
+
+hours = int(z[0])
+minutes = int(z[1])
+seconds = int(z[2])
+
+dtime = 0
+
+on = False
+
+# def dclock():
+#     # global seconds, minutes, hours
+#     global dtime, seconds, minutes,hours
+#     while on == True:
+#         seconds = seconds + 1
+#         time.sleep(1)
+#         # dclock()
+#         if seconds == 60:
+#             seconds = 0
+#             minutes = minutes + 1
+#         if minutes == 60:
+#             minutes = 0
+#             hours = hours + 1
+#         if hours > 12:
+#             hours = hours - 12
+#         dtime = (str(hours).zfill(2) + ':' + str(minutes).zfill(2) + ':' + str(seconds).zfill(2))
+#         return dtime
+
+def dclock():
+    global dtime
+    while True:
+        time.sleep(1)
+        current_date = str(datetime.datetime.today())
+        current_time = current_date.split()[1]
+        basic_time = (current_time.split(':'))
+        hours = basic_time[0]
+        minutes = basic_time[1]
+        seconds = basic_time[2]
+        dtime = (str(hours).zfill(2) + ':' + str(minutes).zfill(2) + ':' + str(seconds).zfill(2))
+        return dtime
 
 # Create your views here.
 
-# dclock()
 
 def home(request):
-    return render(request, 'home.html', {'time': dclock()})
+    global on
+    on = True
+    dclock()
+    return render(request, 'home.html', {'dtime': dtime })
 
 @login_required
 def dreams_index(request):
