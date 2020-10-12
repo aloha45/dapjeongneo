@@ -24,7 +24,7 @@ body {
       color: whitesmoke
   }
 
-  h2 {
+  #clock {
       color: whitesmoke;
-      background-color: white
+      font-size: 64px
   }

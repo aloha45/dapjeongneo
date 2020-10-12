@@ -2,12 +2,37 @@
 {% block content %}
 
 <h1>Dream a little dream</h1>
-<h2 style='color:white'>{{ dtime }}</h2>
-<input />
+<!-- <h2 style='color:white'>{{ dtime }}</h2> -->
+<div style='color: whitesmoke; font-size: 64px; text-align: center' id='clock'></div>
 
 <script>
-    setTimeout(function(){ 
-        location.reload(), 60000});
+    // setTimeout(function(){ 
+    //     location.reload(), 60000});
+    function currentTime() {
+        let date = new Date();
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        let sec = date.getSeconds();
+        hour = updateTime(hour);
+        if (hour > 10) {
+            hour = parseInt((hour - 12))
+        }
+        min = updateTime(min);
+        sec = updateTime(sec);
+        document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; 
+        let t = setTimeout(function(){ currentTime() }, 1000); 
+        }
+
+function updateTime(time) {
+  if (time < 10) {
+    return "0" + time;
+  }
+  else {
+    return time;
+  }
+}
+
+currentTime()
 </script>
 
 {% endblock %}
