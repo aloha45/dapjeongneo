@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Dream
+from .time import dclock
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm 
 from django.contrib.auth.decorators import login_required
@@ -10,8 +11,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
+# dclock()
+
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html', {'time': dclock()})
 
 @login_required
 def dreams_index(request):
