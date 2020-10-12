@@ -47,7 +47,7 @@ def dclock2():
         basic_time = (current_time.split(':'))
         hours = basic_time[0]
         minutes = basic_time[1]
-        seconds = basic_time[2]
+        seconds = round(float(basic_time[2]))
         dtime = (str(hours).zfill(2) + ':' + str(minutes).zfill(2) + ':' + str(seconds).zfill(2))
         print(dtime)
     # time.sleep(1)
