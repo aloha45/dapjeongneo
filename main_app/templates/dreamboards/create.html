@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>You make my dreams come true</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ dreamboard_form.as_table }}
+    <input type="submit" class="btn" value="ENTER">
+  </form>
+
+{% endblock %}

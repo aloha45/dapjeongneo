@@ -4,27 +4,31 @@ body {
     background-repeat: no-repeat;
   }
 
-  .nav-bar {
+.nav-bar {
     background-color: black;
     justify-content: right;
   }
 
-  .container {
+.container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
     padding: 10px;
   }
 
-  .card {
+.card {
     text-align: center
   }
 
-  h1 {
+h1 {
       color: whitesmoke
   }
 
-  #clock {
+#clock {
       color: whitesmoke;
       font-size: 64px
+  }
+
+#newDream {
+      text-align: center
   }

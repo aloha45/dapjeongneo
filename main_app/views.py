@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Dream
+from .forms import DreamboardForm
 # from .time import dclock
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm 
@@ -90,6 +91,12 @@ def signup(request):
     form = UserCreationForm()
     context = {'form': form, 'error_message': error_message}
     return render (request, 'registration/signup.html', context)
+
+def dreamboard_create(request):
+    dreamboard_form = DreamboardForm()
+    return render (request, 'dreamboards/create.html', {
+        'dreamboard_form': dreamboard_form
+    })
 
 class DreamCreate(LoginRequiredMixin, CreateView):
     model = Dream
