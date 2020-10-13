@@ -21,15 +21,20 @@ class Dream(models.Model):
 class Dreamboard(models.Model):
     created_date = models.DateField(auto_now_add=True)
     created_time = models.TimeField(auto_now_add=True)
-    one = models.BooleanField()
-    two = models.BooleanField()
-    three = models.BooleanField()
-    four = models.BooleanField()
-    five = models.BooleanField()
-    six = models.BooleanField()
-    seven = models.BooleanField()
-    eight = models.BooleanField()
-    nine = models.BooleanField()
-    ten = models.BooleanField()
-    eleven = models.BooleanField()
-    twelve = models.BooleanField()
+    one = models.BooleanField(default=False)
+    two = models.BooleanField(default=False)
+    three = models.BooleanField(default=False)
+    four = models.BooleanField(default=False)
+    five = models.BooleanField(default=False)
+    six = models.BooleanField(default=False)
+    seven = models.BooleanField(default=False)
+    eight = models.BooleanField(default=False)
+    nine = models.BooleanField(default=False)
+    ten = models.BooleanField(default=False)
+    eleven = models.BooleanField(default=False)
+    twelve = models.BooleanField(default=False)
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Created on {self.created_date} at {self.created_time}.'
