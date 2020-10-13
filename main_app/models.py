@@ -17,3 +17,19 @@ class Dream(models.Model):
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'dream_id': self.id})
+
+class Dreamboard(models.Model):
+    created_date = models.DateField(auto_now_add=True)
+    created_time = models.TimeField(auto_now_add=True)
+    one = models.BooleanField()
+    two = models.BooleanField()
+    three = models.BooleanField()
+    four = models.BooleanField()
+    five = models.BooleanField()
+    six = models.BooleanField()
+    seven = models.BooleanField()
+    eight = models.BooleanField()
+    nine = models.BooleanField()
+    ten = models.BooleanField()
+    eleven = models.BooleanField()
+    twelve = models.BooleanField()
