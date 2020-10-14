@@ -120,3 +120,6 @@ class DreamboardCreate(CreateView):
     model = Dreamboard
     fields = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
     success_url = '/'
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
