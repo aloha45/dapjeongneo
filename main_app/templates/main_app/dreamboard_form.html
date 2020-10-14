@@ -8,109 +8,58 @@
     <br>
     <br>
     <br>
-    <br>
     <div style='color: whitesmoke; font-size: 64px; text-align: center' id='clock'></div>
 <form method="post" action="">
     {% csrf_token %}
-    <ul>
-        <li>
             <label>    
+                <i class='fa fa-home' id='deg0' aria-hidden='true'></i>
                 <input hidden type="checkbox" id='deg0' name="one">
-                <div class='icon-box'>
-                    <i class='fa fa-home' aria-hidden='true'></i>
-                </div>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg30' name="two">
-                <div class="icon-box">
-                    <i class="fas fa-atom" aria-hidden="true"></i>
-                </div> 
+                <i class="fas fa-atom" id='deg30' aria-hidden="true"></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg60' name="three">
-                <div class="icon-box">
-                    <i class="fas fa-book" aria-hidden="true"></i>
-                  </div>
+                <i class="fas fa-book" id='deg60' aria-hidden="true"></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg90' name="four">   
-                <div class="icon-box">
-                    <i class="fas fa-hand-holding-heart"></i>
-                  </div>
+                <i class="fas fa-hand-holding-heart" id='deg90'></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg120' name="five">
-                <div class="icon-box">
-                    <i class="fa fa-battery-full" aria-hidden="true"></i>
-                  </div>
+                <i class="fa fa-battery-full" id='deg120' aria-hidden="true"></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg150' name="six">
-                <div class="icon-box">
-                    <i class="fa fa-code" aria-hidden="true"></i>
-                  </div>
+                    <i class="fa fa-code" id='deg150' aria-hidden="true"></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg180' name="seven">
-                <div class="icon-box">
-                    <i class="fas fa-tree" aria-hidden='true'></i>
-                </div>
+                <i class="fas fa-tree" id='deg180' aria-hidden='true'></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg210' name="eight">  
-                <div class="icon-box">
-                    <i class="fas fa-crow" aria-hidden='true'></i>
-                </div>
+                <i class="fas fa-crow" id='deg210' aria-hidden='true'></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg240' name="nine">
-                <div class="icon-box">
-                    <i class="fas fa-cloud-rain" aria-hidden='true'></i>
-                </div>
+                <i class="fas fa-cloud-rain" id='deg240' aria-hidden='true'></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg270' name="ten">
-                <div class="icon-box">
-                    <i class="fas fa-skull" aria-hidden='true'></i>
-                </div>
+                <i class="fas fa-skull" id='deg270' aria-hidden='true'></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg300' name="eleven">
-                <div class="icon-box">
-                    <i class="fas fa-hiking" aria-hidden='true'></i>
-                </div>
+                <i class="fas fa-hiking" id='deg300' aria-hidden='true'></i>
             </label>
-        </li>
-        <li>
             <label>
                 <input hidden type="checkbox" id='deg330' name="twelve"> 
-                <div class="icon-box">
-                    <i class="fas fa-pen" aria-hidden='true'></i>
-                </div>
+                <i class="fas fa-pen" id='deg330' aria-hidden='true'></i>
             </label>
-        </li>
         <input type="submit" id='deg360' class="btn" value="Go">
-    </ul>
     </form>
 </div>
 

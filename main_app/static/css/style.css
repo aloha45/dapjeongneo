@@ -4,6 +4,10 @@ body {
     background-repeat: no-repeat;
   }
 
+form {
+  text-align: center
+}
+
 .nav-bar {
     background-color: black;
     justify-content: right;
@@ -46,7 +50,7 @@ h1 {
     margin: 1.75em auto 0;
 }
 
-.circle-container input {
+.circle-container label {
     display: block;
     position: absolute;
     top: 50%; left: 50%;
@@ -68,65 +72,15 @@ h1 {
 #deg330 { transform: rotate(330deg) translate(15em) rotate(-330deg)}
 
 #deg360 { 
-    margin-top:45px;
     background-color: whitesmoke;
     text-align: center;
     height: 2.4em;
     justify-self: center;
     /* width: 12em; */
-    margin-right: 100px;
 }
 
 #deg360:hover {
     background-color: grey;
     color: whitesmoke;
     box-shadow: black;
-}
-
-ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  padding: 20px;
-  width: 240px;
-  background: #ebf5fc;
-  box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-ul li {
-  position: relative;
-  list-style: none;
-  text-align: center;
-  margin: 15px;
-}
-ul li label {
-  position: relative;
-  cursor: pointer;
-}
-ul li label input[type=checkbox] {
-  position: absolute;
-  opacity: 0;
-}
-ul li label :checked ~ .icon-box {
-  box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
-}
-ul li label :checked ~ .icon-box .fa {
-  transform: scale(0.95);
-}
-ul li label .icon-box {
-  width: 60px;
-  height: 60px;
-  background: #ebf5fc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-ul li label .icon-box .fa {
-  font-size: 30px;
-  color: #6a9bd8;
 }
