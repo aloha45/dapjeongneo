@@ -38,3 +38,10 @@ class Dreamboard(models.Model):
 
     def __str__(self):
         return f'Created on {self.created_date} at {self.created_time}.'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'dreamboard_id': self.id})

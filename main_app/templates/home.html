@@ -3,8 +3,10 @@
 
 <br>
 <br>
-<div style='color: whitesmoke; font-size: 64px; text-align: center' id='clock'></div>
-<a id='newDream' style='text-align: center' href='/dreamboard_create/'>Dream a little dream</a>
+<a id='newDream' href="{% url 'dreamboards_create' %}">
+    <div style='color: whitesmoke; font-size: 64px; text-align: center; margin: 0 auto' id='clock'></div>
+    <h6 style="color: whitesmoke; text-align:center; margin:auto">Click here</h6>
+</a>
 
 <script>
     // setTimeout(function(){ 

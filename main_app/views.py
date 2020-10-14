@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Dream
+from .models import Dream, Dreamboard
 from .forms import DreamboardForm
 # from .time import dclock
 from django.contrib.auth import login
@@ -115,3 +115,8 @@ class DreamUpdate(LoginRequiredMixin, UpdateView):
 class DreamDelete(LoginRequiredMixin, DeleteView):
     model = Dream
     success_url = '/dreams/'
+
+class DreamboardCreate(CreateView):
+    model = Dreamboard
+    fields = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
+    success_url = '/'
