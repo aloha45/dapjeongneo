@@ -2,10 +2,30 @@
 {% block content %}
 
 <h1>You make my dreams come true</h1>
-<form method="post">
+<div class='circle-container'>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style='color: whitesmoke; font-size: 64px; text-align: center' id='clock'></div>
+<form method="post" action="">
     {% csrf_token %}
-    {{ dreamboard_form.as_table }}
-    <input type="submit" class="btn" value="ENTER">
-  </form>
-
+        <input type="checkbox" id='deg0' name="one">
+        <input type="checkbox" id='deg30' name="two">
+        <input type="checkbox" id='deg60' name="three">
+        <input type="checkbox" id='deg90' name="four">   
+        <input type="checkbox" id='deg120' name="five">
+        <input type="checkbox" id='deg150' name="six">
+        <input type="checkbox" id='deg180' name="seven">
+        <input type="checkbox" id='deg210' name="eight">  
+        <input type="checkbox" id='deg240' name="nine">
+        <input type="checkbox" id='deg270' name="ten">
+        <input type="checkbox" id='deg300' name="eleven">
+        <input type="checkbox" id='deg330' name="twelve"> 
+        <input type="submit" id='deg360' class="btn" value="Go">
+    </form>
+</div>
+    
 {% endblock %}

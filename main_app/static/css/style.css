@@ -21,7 +21,9 @@ body {
   }
 
 h1 {
-      color: whitesmoke
+      color: whitesmoke;
+      text-align: center;
+      padding-bottom: 20px
   }
 
 #clock {
@@ -32,3 +34,51 @@ h1 {
 #newDream {
       text-align: center
   }
+
+.circle-container {
+    position: relative;
+    width: 30em;
+    height: 30em;
+    padding: 2.8em;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    /* border: dashed 1px; */
+    border-radius: 50%;
+    margin: 1.75em auto 0;
+}
+
+.circle-container input {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 4em; height: 4em;
+    margin: -2em;
+}
+
+#deg0 { transform: translate(15em); }
+#deg30 { transform: rotate(30deg) translate(15em) rotate(-30deg)}
+#deg60 { transform: rotate(60deg) translate(15em) rotate(-60deg)}
+#deg90 { transform: rotate(90deg) translate(15em) rotate(-90deg)}
+#deg120 { transform: rotate(120deg) translate(15em) rotate(-120deg)}
+#deg150 { transform: rotate(150deg) translate(15em) rotate(-150deg)}
+#deg180 { transform: rotate(180deg) translate(15em) rotate(-180deg)}
+#deg210 { transform: rotate(210deg) translate(15em) rotate(-210deg)}
+#deg240 { transform: rotate(240deg) translate(15em) rotate(-240deg)}
+#deg270 { transform: rotate(270deg) translate(15em) rotate(-270deg)}
+#deg300 { transform: rotate(300deg) translate(15em) rotate(-300deg)}
+#deg330 { transform: rotate(330deg) translate(15em) rotate(-330deg)}
+
+#deg360 { 
+    margin-top:45px;
+    background-color: whitesmoke;
+    text-align: center;
+    height: 2.4em;
+    justify-self: center;
+    /* width: 12em; */
+    margin-right: 100px;
+}
+
+#deg360:hover {
+    background-color: grey;
+    color: whitesmoke;
+    box-shadow: black;
+}

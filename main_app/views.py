@@ -93,7 +93,10 @@ def signup(request):
     return render (request, 'registration/signup.html', context)
 
 def dreamboard_create(request):
-    dreamboard_form = DreamboardForm()
+    dreamboard_form = DreamboardForm(request.POST)
+    if dreamboard_form.is_valid():
+        new_dreamboard = dreamboard_form.save(commit=False)
+        new_dreamboard.save()
     return render (request, 'dreamboards/create.html', {
         'dreamboard_form': dreamboard_form
     })
