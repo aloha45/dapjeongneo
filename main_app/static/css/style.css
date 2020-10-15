@@ -1,6 +1,6 @@
 body {
+    height: 100vh;
     background-image: linear-gradient(to bottom right, #411687, #05367a);
-    min-height: 100vh;
     background-repeat: no-repeat;
   }
 
@@ -35,15 +35,12 @@ h1 {
       font-size: 64px
   }
 
-/* #newDream {
-      text-align: center
-  } */
 
 .circle-container {
     position: relative;
     width: 30em;
     height: 30em;
-    padding: 2.8em;
+    padding: 1em;
     /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
     /* border: dashed 1px; */
     border-radius: 50%;
@@ -58,18 +55,18 @@ h1 {
     margin: -2em;
 }
 
-#deg0 { transform: translate(15em); }
-#deg30 { transform: rotate(30deg) translate(15em) rotate(-30deg)}
-#deg60 { transform: rotate(60deg) translate(15em) rotate(-60deg)}
-#deg90 { transform: rotate(90deg) translate(15em) rotate(-90deg)}
-#deg120 { transform: rotate(120deg) translate(15em) rotate(-120deg)}
-#deg150 { transform: rotate(150deg) translate(15em) rotate(-150deg)}
-#deg180 { transform: rotate(180deg) translate(15em) rotate(-180deg)}
-#deg210 { transform: rotate(210deg) translate(15em) rotate(-210deg)}
-#deg240 { transform: rotate(240deg) translate(15em) rotate(-240deg)}
-#deg270 { transform: rotate(270deg) translate(15em) rotate(-270deg)}
-#deg300 { transform: rotate(300deg) translate(15em) rotate(-300deg)}
-#deg330 { transform: rotate(330deg) translate(15em) rotate(-330deg)}
+#deg0 { transform: translate(5em); }
+#deg30 { transform: rotate(30deg) translate(5em) rotate(-30deg)}
+#deg60 { transform: rotate(60deg) translate(5em) rotate(-60deg)}
+#deg90 { transform: rotate(90deg) translate(5em) rotate(-90deg)}
+#deg120 { transform: rotate(120deg) translate(5em) rotate(-120deg)}
+#deg150 { transform: rotate(150deg) translate(5em) rotate(-150deg)}
+#deg180 { transform: rotate(180deg) translate(5em) rotate(-180deg)}
+#deg210 { transform: rotate(210deg) translate(5em) rotate(-210deg)}
+#deg240 { transform: rotate(240deg) translate(5em) rotate(-240deg)}
+#deg270 { transform: rotate(270deg) translate(5em) rotate(-270deg)}
+#deg300 { transform: rotate(300deg) translate(5em) rotate(-300deg)}
+#deg330 { transform: rotate(330deg) translate(5em) rotate(-330deg)}
 
 #deg360 { 
     background-color: whitesmoke;
@@ -83,4 +80,9 @@ h1 {
     background-color: grey;
     color: whitesmoke;
     box-shadow: black;
+}
+
+i:checked {
+  background-color: whitesmoke;
+  color: red
 }
