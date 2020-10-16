@@ -15,6 +15,7 @@ Check out the ERDs, wireframes, and trello board [here](https://trello.com/b/OOv
 - Sass
 - Font Awesome Icons
 - Bootstrap
+- PostgreSQL
 
 Also big thanks to the delightful folks of GA SEI 7-27
 
