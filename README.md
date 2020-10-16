@@ -31,7 +31,7 @@ Check out the ERDs, wireframes, and trello board [here](https://trello.com/b/OOv
 
 ## Getting Started
 
-
+Check it out on [heroku](https://dapjeongneo.herokuapp.com/).
 
 ## Next Steps
 

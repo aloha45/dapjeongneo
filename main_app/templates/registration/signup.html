@@ -6,7 +6,7 @@
 {% if error_message %}
 <p class='red-text'>{{ error_message }}</p>
 {% endif %}
-<form method="post" action="{% url 'signup' %}">
+<form style='text-align:left; color: whitesmoke' method="post" action="{% url 'signup' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class="btn" value="login">
