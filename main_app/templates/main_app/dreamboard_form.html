@@ -1,62 +1,65 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>You make my dreams come true</h1>
+<!-- <h1>You make my dreams come true</h1> -->
 <div class='circle-container'>
     <br>
     <br>
     <br>
     <br>
     <br>
-    <div style='color: whitesmoke; font-size: 64px; text-align: center' id='clock'></div>
+    <br>
+    <br>
+    <br>
+    <div style='font-weight: 75; color: gold; font-size: 64px; text-align: center' id='clock'></div>
 <form method="post" action="">
     {% csrf_token %}
-            <label>    
-                <input hidden type="checkbox" id='deg0' name="one">
+            <label class='btn'>    
+                <input hidden type="checkbox" name="one">
                 <i class='fas fa-home fa-3x' id='deg0' aria-hidden='true'></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg30' name="two">
+                <input hidden type="checkbox" name="two">
                 <i class="fas fa-atom fa-3x" id='deg30' aria-hidden="true"></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg60' name="three">
+                <input hidden type="checkbox" name="three">
                 <i class="fas fa-book fa-3x" id='deg60' aria-hidden="true"></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg90' name="four">   
+                <input hidden type="checkbox" name="four">   
                 <i class="fas fa-hand-holding-heart fa-3x" id='deg90'></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg120' name="five">
+                <input hidden type="checkbox" name="five">
                 <i class="fas fa-seedling fa-3x" id='deg120' aria-hidden="true"></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg150' name="six">
+                <input hidden type="checkbox" name="six">
                     <i class="fas fa-music fa-3x" id='deg150' aria-hidden="true"></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg180' name="seven">
+                <input hidden type="checkbox" name="seven">
                 <i class="fas fa-tree fa-3x" id='deg180' aria-hidden='true'></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg210' name="eight">  
+                <input hidden type="checkbox" name="eight">  
                 <i class="fas fa-crow fa-3x" id='deg210' aria-hidden='true'></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg240' name="nine">
+                <input hidden type="checkbox" name="nine">
                 <i class="fas fa-cloud-rain fa-3x" id='deg240' aria-hidden='true'></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg270' name="ten">
+                <input hidden type="checkbox" name="ten">
                 <i class="fas fa-skull fa-3x" id='deg270' aria-hidden='true'></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg300' name="eleven">
+                <input hidden type="checkbox" name="eleven">
                 <i class="fas fa-hiking fa-3x" id='deg300' aria-hidden='true'></i>
             </label>
             <label>
-                <input hidden type="checkbox" id='deg330' name="twelve"> 
+                <input hidden type="checkbox" name="twelve"> 
                 <i class="fas fa-pen fa-3x" id='deg330' aria-hidden='true'></i>
             </label>
         <input type="submit" id='deg360' class="btn" value="Go">

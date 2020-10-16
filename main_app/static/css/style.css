@@ -1,6 +1,7 @@
 body {
-    height: 100vh;
-    background-image: linear-gradient(to bottom right, #411687, #05367a);
+    height: 100%;
+    background-image: url('../photos/pexels-photo-924824.jpeg');
+    /* background-image: linear-gradient(to bottom right, #411687, #05367a); */
     background-repeat: no-repeat;
   }
 
@@ -38,13 +39,15 @@ h1 {
 
 .circle-container {
     position: relative;
-    width: 30em;
-    height: 30em;
+    width: 40em;
+    height: 40em;
     padding: 1em;
     /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-    /* border: dashed 1px; */
+    border: solid 35px;
+    border-color: gold;
     border-radius: 50%;
     margin: 1.75em auto 0;
+    margin-bottom: 30px;
 }
 
 .circle-container label {
@@ -55,7 +58,7 @@ h1 {
     margin: -2em;
 }
 
-#deg0 { transform: translate(5em); }
+#deg0 { transform: translate(5em);}
 #deg30 { transform: rotate(30deg) translate(5em) rotate(-30deg)}
 #deg60 { transform: rotate(60deg) translate(5em) rotate(-60deg)}
 #deg90 { transform: rotate(90deg) translate(5em) rotate(-90deg)}
@@ -67,7 +70,6 @@ h1 {
 #deg270 { transform: rotate(270deg) translate(5em) rotate(-270deg)}
 #deg300 { transform: rotate(300deg) translate(5em) rotate(-300deg)}
 #deg330 { transform: rotate(330deg) translate(5em) rotate(-330deg)}
-
 #deg360 { 
     background-color: whitesmoke;
     text-align: center;
@@ -78,11 +80,33 @@ h1 {
 
 #deg360:hover {
     background-color: grey;
-    color: whitesmoke;
+    color: gold;
     box-shadow: black;
 }
 
-i:checked {
-  background-color: whitesmoke;
-  color: red
+i:hover {
+  background-color: grey;
+  color: whitesmoke;
+  box-shadow: black;
+  border-radius: 5px
+}
+
+#btnControl {
+  display: none;
+}
+
+#btnControl:checked + label > img {
+  width: 70px;
+  height: 74px;
+}
+
+.fas {
+  color: whitesmoke;
+  border: grey 1px
+}
+
+input[type="checkbox"]:checked + i {
+  color: gold;
+  box-shadow: whitesmoke;
+  border-radius: 5px
 }
