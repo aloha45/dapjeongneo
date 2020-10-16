@@ -21,14 +21,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav justify-content-end">
                 {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'dreams_create' %}">Dream a little dream<span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="{% url 'dreams_index' %}">In Your Dreams<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'dreams_create' %}">Dream a little dream<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'dreamboards_create' %}">A far of dream</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'dreamboards_create' %}">Dreamboards</a>
+                  <a class="nav-link" href="{% url 'dreamboards_index' %}">A scattered memory</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">Log Out<span class="sr-only">(current)</span></a>

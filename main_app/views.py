@@ -104,7 +104,20 @@ def dreamboard_create(request):
 
 @login_required
 def dreamboards_index(request):
-    dreamboards = Dreamboard.objects.filter(user=request.user)
+    array = ['home', 'atom', 'book', 'hand_holding_heart', 'seedling', 'music', 'tree', 'crow', 'cloud_rain', 'skull', 'hiking', 'pen']
+    dreamboards = list(Dreamboard.objects.filter(user=request.user).values())
+    # print(dreamboards)
+    user_icons = {}
+    for i in dreamboards:
+        user_icons[i['id']]=[]
+        for x in array:
+            if i[x] == True:
+                user_icons[i['id']].append(x)
+    # for i in dreamboards:
+    #     print(i.home)
+        # for x in array:
+        #     print(i.home)
+    print(user_icons)
     return render(request, 'dreamboards/index.html', { 'dreamboards': dreamboards })
 
 class DreamCreate(LoginRequiredMixin, CreateView):
@@ -129,3 +142,4 @@ class DreamboardCreate(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+    

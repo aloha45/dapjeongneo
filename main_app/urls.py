@@ -11,5 +11,5 @@ urlpatterns = [
     path('accounts/signup/', views.signup, name='signup'),
     path('dreamboard_create/', views.dreamboard_create, name='dreamboard_create'),
     path('dreamboards/create/', views.DreamboardCreate.as_view(), name='dreamboards_create'),
-    path('dreamboards/', views.dreamboards_index, name='index')
+    path('dreamboards/', views.dreamboards_index, name='dreamboards_index')
 ]
