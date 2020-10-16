@@ -20,6 +20,8 @@ Also big thanks to the delightful folks of GA SEI 7-27
 
 ## Screenshots
 
+![zero](main_app/static/photos/20201016_104735.jpg)
+
 ![one](main_app/static/photos/Screen%20Shot%202020-10-16%20at%203.40.58%20AM.png)
 
 ![two](main_app/static/photos/Screen%20Shot%202020-10-16%20at%203.39.46%20AM.png)
