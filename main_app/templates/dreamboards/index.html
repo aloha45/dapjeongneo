@@ -2,14 +2,15 @@
 {% block content %}
 
 <h1>Dream Log</h1>
-
-{% for user_icon in user_icons %}
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{user_icon}}</h5>
-      <p class="card-text">{{user_icon}}</p>
-      <a href="/dreamboards/create/" class="card-link">Add a new dream</a>
+<div class='container'>    
+    {% for dreamboard in dreamboards %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ dreamboard }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ dreamboard.id.dreamboard }}</h6>
+            <a href="/dreamboards/create/" class="card-link">Add a new dream</a>
+        </div>
     </div>
-  </div>
-{% endfor %}
+    {% endfor %}
+</div>
 {% endblock %}

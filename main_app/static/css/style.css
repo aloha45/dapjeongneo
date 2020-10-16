@@ -6,7 +6,9 @@ body {
     text-align: center;
   }
 
-
+label {
+  color: whitesmoke
+}
 
 form {
   text-align: center
@@ -28,11 +30,6 @@ form {
     text-align: center
   }
 
-h1 {
-      color: whitesmoke;
-      text-align: center;
-      padding-bottom: 20px
-  }
 
 #clock {
       color: whitesmoke;
@@ -143,4 +140,10 @@ th {
   background-color: grey;
   color: gold;
   box-shadow: black;
+}
+
+h1 {
+  color: whitesmoke;
+  text-align: center;
+  padding-bottom: 20px
 }
