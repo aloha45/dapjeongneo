@@ -3,6 +3,7 @@ body {
     background-image: url('../photos/pexels-photo-924824.jpeg');
     /* background-image: linear-gradient(to bottom right, #411687, #05367a); */
     background-repeat: no-repeat;
+    text-align: center;
   }
 
 
@@ -111,4 +112,35 @@ input[type="checkbox"]:checked + i {
   color: gold;
   box-shadow: whitesmoke;
   border-radius: 5px
+}
+
+.create-dream {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto
+}
+
+table {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto
+}
+
+th {
+  color: whitesmoke
+}
+
+.btn {
+  background-color: whitesmoke;
+  text-align: center;
+  height: 2.4em;
+  justify-self: center;
+}
+
+.btn:hover {
+  background-color: grey;
+  color: gold;
+  box-shadow: black;
 }

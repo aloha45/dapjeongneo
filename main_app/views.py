@@ -92,6 +92,7 @@ def signup(request):
     context = {'form': form, 'error_message': error_message}
     return render (request, 'registration/signup.html', context)
 
+@login_required
 def dreamboard_create(request):
     dreamboard_form = DreamboardForm(request.POST)
     if dreamboard_form.is_valid():
@@ -100,6 +101,11 @@ def dreamboard_create(request):
     return render (request, 'dreamboards/create.html', {
         'dreamboard_form': dreamboard_form
     })
+
+@login_required
+def dreamboards_index(request):
+    dreamboards = Dreamboard.objects.filter(user=request.user)
+    return render(request, 'dreamboards/index.html', { 'dreamboards': dreamboards })
 
 class DreamCreate(LoginRequiredMixin, CreateView):
     model = Dream

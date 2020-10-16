@@ -22,19 +22,19 @@
               <ul class="navbar-nav justify-content-end">
                 {% if user.is_authenticated %}
                 <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'index' %}">In Your Dreams<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{% url 'dreams_index' %}">In Your Dreams<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'dreams_create' %}">Dream a little dream<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dreamboards_create' %}">Dreamboards</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">Log Out<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/">Admin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'dreamboards_create' %}">Dreamboards</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
@@ -50,9 +50,9 @@
     </header>
     <br>
 <br>
+<div style='font-weight: 75; color: gold; font-size: 64px; text-align: center' id='clock'></div>
 {% block content %}
 {% endblock %}
-<div style='font-weight: 75; color: gold; font-size: 64px; text-align: center' id='clock'></div>
 </body>
 <script>
     // setTimeout(function(){ 
