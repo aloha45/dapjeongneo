@@ -118,7 +118,7 @@ class DreamDelete(LoginRequiredMixin, DeleteView):
 
 class DreamboardCreate(CreateView):
     model = Dreamboard
-    fields = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
+    fields = ['home', 'atom', 'book', 'hand_holding_heart', 'seedling', 'music', 'tree', 'crow', 'cloud_rain', 'skull', 'hiking', 'pen']
     success_url = '/'
     def form_valid(self, form):
         form.instance.user = self.request.user

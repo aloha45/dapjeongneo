@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'Dapjeongneo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dapjeongneo',
+        'NAME': 'dapjeongneo2',
     }
 }
 
