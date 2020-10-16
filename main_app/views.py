@@ -106,23 +106,34 @@ def dreamboard_create(request):
 def dreamboards_index(request):
     array = ['home', 'atom', 'book', 'hand_holding_heart', 'seedling', 'music', 'tree', 'crow', 'cloud_rain', 'skull', 'hiking', 'pen']
     dreamboards = list(Dreamboard.objects.filter(user=request.user).values())
-    print(dreamboards)
-    user_icons = {}
+    # print(dreamboards)
+    # user_icons = {}
     new_dreamboards = []
     for i in dreamboards:
-        user_icons[i['id']]=[]
+        user_icons = {}
+        user_icons['id']=i['id']
+        user_icons['list'] = []
         for x in array:
             if i[x] == True:
-                user_icons[i['id']].append(x)
-    for j in user_icons:
-        # print(j)
-        # print(user_icons[j])
-        new_dreamboard = { j: user_icons[j]}
-        print(new_dreamboard)
-        new_dreamboards.append(new_dreamboard)
+                user_icons['list'].append(x)
+        new_dreamboards.append(user_icons)
     print(new_dreamboards)
+
+
+    # for i in dreamboards:
+    #     user_icons[i['id']]=[]
+    #     for x in array:
+    #         if i[x] == True:
+    #             user_icons[i['id']].append(x)
+    # for j in user_icons:
+    #     # print(j)
+    #     # print(user_icons[j])
+    #     new_dreamboard = { j: user_icons[j]}
+    #     print(new_dreamboard)
+    #     new_dreamboards.append(new_dreamboard)
+    # print(new_dreamboards)
     # print(user_icons)
-    return render(request, 'dreamboards/index.html', { 'dreamboards': user_icons, 'new_dreamboards': new_dreamboards })
+    return render(request, 'dreamboards/index.html', { 'new_dreamboards': new_dreamboards })
 
 class DreamCreate(LoginRequiredMixin, CreateView):
     model = Dream

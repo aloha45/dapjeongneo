@@ -13,6 +13,10 @@ Check out the ERDs, wireframes, and trello board [here](https://trello.com/b/OOv
 - Python
 - Django
 - Sass
+- Font Awesome Icons
+- Bootstrap
+
+Also big thanks to the delightful folks of GA SEI 7-27
 
 ## Screenshots
 

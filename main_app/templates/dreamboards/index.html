@@ -3,11 +3,16 @@
 
 <h1>Dream Log</h1>
 <div class='container'>    
-    {% for dreamboard in dreamboards %}
+    {% for dreamboard in new_dreamboards %}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">{{ dreamboard }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ dreamboard.id.dreamboard }}</h6>
+            {% comment %} {{ dreamboard }} {% endcomment %}
+            <p>DREAM</p>
+            <h5 class="card-title">{{ dreamboard.id }}</h5>
+            {% for item in dreamboard.list %}
+                <p>{{ item }}</p>
+            {% endfor %}
+            <h6 class="card-subtitle mb-2 text-muted">{{ new_dreamboards.new_dreamboards }}</h6>
             <a href="/dreamboards/create/" class="card-link">Add a new dream</a>
         </div>
     </div>
