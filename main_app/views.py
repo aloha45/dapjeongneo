@@ -108,17 +108,26 @@ def dreamboards_index(request):
     dreamboards = list(Dreamboard.objects.filter(user=request.user).values())
     # print(dreamboards)
     user_icons = {}
+    user_icons_lists =[]
     for i in dreamboards:
-        user_icons[i['id']]=[]
+        user_icons[i['created_date']]=[]
         for x in array:
             if i[x] == True:
-                user_icons[i['id']].append(x)
+                user_icons[i['created_date']].append(x)
     # for i in dreamboards:
     #     print(i.home)
         # for x in array:
         #     print(i.home)
+    for j in user_icons:
+        # k = user_icons[j]
+        # user_icons_lists.append(k)
+    #     print(user_icons_lists)
+        # for l in k:
+        #     print(l)
+        print(user_icons[j])
+        # print(user_icons[j].join(' '))
     print(user_icons)
-    return render(request, 'dreamboards/index.html', { 'dreamboards': dreamboards })
+    return render(request, 'dreamboards/index.html', { 'user_icons':user_icons, 'user_icons_lists': user_icons_lists })
 
 class DreamCreate(LoginRequiredMixin, CreateView):
     model = Dream

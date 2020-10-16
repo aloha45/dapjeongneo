@@ -3,5 +3,13 @@
 
 <h1>Dream Log</h1>
 
-
+{% for user_icon in user_icons %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{user_icon}}</h5>
+      <p class="card-text">{{user_icon}}</p>
+      <a href="/dreamboards/create/" class="card-link">Add a new dream</a>
+    </div>
+  </div>
+{% endfor %}
 {% endblock %}
