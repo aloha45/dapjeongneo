@@ -2,7 +2,7 @@
 {% block content %}
 
 <h1>Dream Log</h1>
-{% if dreamboards %}
+{% if new_dreamboards %}
 <div class='container'>    
     {% for dreamboard in new_dreamboards %}
     <div class="card" style="width: 18rem;">
@@ -23,4 +23,5 @@
 <div class='container'>
     <h1 style='color:whitesmoke'>Record a dream</h1>
 </div>
+{% endif %}
 {% endblock %}
