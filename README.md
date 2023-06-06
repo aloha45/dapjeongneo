@@ -40,6 +40,12 @@ Also big thanks to the delightful folks of GA SEI 7-27
 
 Check it out on [heroku](https://dapjeongneo.herokuapp.com/).
 
+1. Clone repository.
+2. Open project directory.
+3. Run <code>pip3 install -r requirements.txt</code> in command line under directory path.
+4. Run django migrations to create database <code>python3 manage.py migrate</code>
+5. Run local server with <code>python3 manage.py runserver</code>
+
 ## Next Steps
 
 - Clean up dreamboard index
