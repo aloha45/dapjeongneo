@@ -76,8 +76,10 @@ WSGI_APPLICATION = 'Dapjeongneo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dapjeongneo2',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'dapjeongneo2',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -124,5 +126,5 @@ LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/'
 
-import django_heroku
-django_heroku.settings(locals())
+# import django_heroku
+# django_heroku.settings(locals())
